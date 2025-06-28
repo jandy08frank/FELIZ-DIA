@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <link rel="stylesheet" href="styles.css">
+  <title>TE AMO MICHI</title> 
+ </head> 
+  <body> 
+  <!-- Video de fondo -->
+  <video autoplay muted loop playsinline id="bg-video">
+  <source src="only.mp4" type="video/mp4">
+  Tu navegador no soporta video HTML5.
+</video>
+<canvas id="tulipCanvas"></canvas>
+<script>
+const canvas = document.getElementById("tulipCanvas");
+const ctx = canvas.getContext("2d");
+let tulips = [];
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas();
+
+class Tulip {
+  constructor() {
+    this.x = Math.random() * canvas.width;
+    this.y = Math.random() * canvas.height;
+    this.size = Math.random() * 20 + 10;
+    this.speedX = (Math.random() - 0.5) * 1.5;
+    this.speedY = (Math.random() - 0.5) * 1.5;
+    this.opacity = Math.random() * 0.7 + 0.3;
+    this.color = `rgba(255, 105, 180, ${this.opacity})`; // Rosado fuerte
+  }
+
+  draw() {
+    ctx.beginPath();
+    ctx.ellipse(this.x, this.y, this.size * 0.6, this.size, 0, 0, Math.PI * 2);
+    ctx.fillStyle = this.color;
+    ctx.fill();
+  }
+
+  update() {
+    this.x += this.speedX;
+    this.y += this.speedY;
+
+    if (this.x < 0) this.x = canvas.width;
+    if (this.x > canvas.width) this.x = 0;
+    if (this.y < 0) this.y = canvas.height;
+    if (this.y > canvas.height) this.y = 0;
+  }
+}
+
+function createTulips() {
+  for (let i = 0; i < 5; i++) {
+    tulips.push(new Tulip());
+  }
+}
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  createTulips();
+  tulips.forEach(tulip => {
+    tulip.update();
+    tulip.draw();
+  });
+  requestAnimationFrame(animate);
+}
+animate();
+</script>
+ <body mpa-version="9.0.21" mpa-extension-id="ibefaeehajgcpooopoegkifhgecigeeg"> 
+  <div id="ui"> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       Te amo michi
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+     Te Amo michi
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+       I Love You
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="love"> 
+    <div class="love_horizontal"> 
+     <div class="love_vertical"> 
+      <div class="love_word">
+     </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+</body>
+</html>
