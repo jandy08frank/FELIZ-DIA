@@ -24,13 +24,14 @@ body {
   background: #000;
   height: 100vh;
   overflow: hidden;
+  margin: 0;
 }
 #bg-video {
   position: fixed;
   top: 0;
   left: 0;
-  min-width: 100%;
-  min-height: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
   object-fit: cover;
   z-index: -2;
   opacity: 0.3; /* Hacemos el video translúcido */
@@ -668,6 +669,32 @@ body {
   }
   to {
     transform: translateX(450px);
+  }
+}
+@media (max-width: 768px) {
+  .div_btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.6em;
+    line-height: 48px;
+  }
+
+  #btn-make {
+    bottom: 120px;
+    right: 15px;
+  }
+
+  #div_support {
+    bottom: 60px;
+    right: 10px;
+  }
+
+  #ui .love_word {
+    font-size: 1rem;
+  }
+
+  #ui .love:last-child .love_word {
+    font-size: 1.3rem;
   }
 }
 @keyframes vertical {
